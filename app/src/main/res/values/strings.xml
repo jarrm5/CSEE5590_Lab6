@@ -2,14 +2,6 @@
     <string name="app_name">SQLiteSpeechToTextApp</string>
 
     <!-- Main Activity -->
-    <string name="python_heading">Python</string>
-    <string name="web_heading">Web</string>
-    <string name="android_heading">Android</string>
-    <string name="learning_heading">Deep Learning</string>
-
-    <string name="python_content_desc">python.png</string>
-    <string name="web_content_desc">web.png</string>
-    <string name="android_content_desc">android.png</string>
-    <string name="learning_content_desc">deep_learning.png</string>
+    <string name="textView_hint">Tap to add an item</string>
 
 </resources>

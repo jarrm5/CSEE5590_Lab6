@@ -4,72 +4,45 @@
     android:layout_width="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
-        style="@style/main_row">
-
-        <LinearLayout
-            style="@style/main_cell">
-
-            <TextView
-                style="@style/main_cell_textview"
-                android:text="@string/python_heading"/>
-
-            <ImageView
-                android:id="@+id/python"
-                style="@style/main_cell_imagebutton"
-                android:contentDescription="@string/python_content_desc"
-                android:background="@drawable/python"/>
-        </LinearLayout>
-
-        <LinearLayout
-            style="@style/main_cell">
-
-            <TextView
-                style="@style/main_cell_textview"
-                android:text="@string/web_heading"/>
-
-            <ImageView
-                android:id="@+id/web"
-                style="@style/main_cell_imagebutton"
-                android:contentDescription="@string/web_heading"
-                android:background="@drawable/web"/>
-        </LinearLayout>
-
-    </LinearLayout>
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/grocery_list"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        />
 
     <LinearLayout
-        style="@style/main_row">
+        android:id="@+id/btnSpeakContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f5f5"
+        android:layout_weight="0"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
 
-        <LinearLayout
-            style="@style/main_cell">
+        <ImageButton
+            android:id="@+id/btnSpeak"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@null"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_microphone_2" />
 
-            <TextView
-                style="@style/main_cell_textview"
-                android:text="@string/android_heading"/>
-
-            <ImageView
-                android:id="@+id/android"
-                style="@style/main_cell_imagebutton"
-                android:contentDescription="@string/android_heading"
-                android:background="@drawable/android" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            style="@style/main_cell">
-
-            <TextView
-                style="@style/main_cell_textview"
-                android:text="@string/learning_heading"/>
-
-            <ImageView
-                android:id="@+id/deep_learning"
-                style="@style/main_cell_imagebutton"
-                android:contentDescription="@string/learning_heading"
-                android:background="@drawable/deep_learning"/>
-
-        </LinearLayout>
-
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnSpeak"
+            android:layout_marginBottom="5dp"
+            android:text="@string/textView_hint" />
     </LinearLayout>
+
 
 </LinearLayout>
