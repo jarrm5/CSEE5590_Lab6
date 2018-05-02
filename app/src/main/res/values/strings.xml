@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SQLiteSpeechToTextApp</string>
+
+    <string name="python_heading">Python</string>
+    <string name="web_heading">Web</string>
+    <string name="android_heading">Android</string>
+    <string name="learning_heading">Deep Learning</string>
+
+</resources>
