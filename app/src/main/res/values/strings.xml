@@ -7,8 +7,8 @@
     <string name="android_heading">Android</string>
     <string name="learning_heading">Deep Learning</string>
 
-    <string name="python_content_desc">Python.png</string>
-    <string name="web_content_desc">Web.png</string>
+    <string name="python_content_desc">python.png</string>
+    <string name="web_content_desc">web.png</string>
     <string name="android_content_desc">android.png</string>
     <string name="learning_content_desc">deep_learning.png</string>
 

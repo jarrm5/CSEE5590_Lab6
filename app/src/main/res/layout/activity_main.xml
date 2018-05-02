@@ -18,7 +18,7 @@
                 android:id="@+id/python"
                 style="@style/main_cell_imagebutton"
                 android:contentDescription="@string/python_content_desc"
-                android:background="@drawable/Python"/>
+                android:background="@drawable/python"/>
         </LinearLayout>
 
         <LinearLayout
@@ -32,7 +32,7 @@
                 android:id="@+id/web"
                 style="@style/main_cell_imagebutton"
                 android:contentDescription="@string/web_heading"
-                android:background="@drawable/Web"/>
+                android:background="@drawable/web"/>
         </LinearLayout>
 
     </LinearLayout>
