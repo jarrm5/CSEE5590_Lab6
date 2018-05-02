@@ -6,7 +6,13 @@
 
     <color name="text_color">#000000</color>
 
-    <color name="dark_red">#C03823</color>
+
+
+    <!-- List Item Colors -->
+    <color name="red">#C03823</color>
+    <color name="blue">#0193B7</color>
+    <color name="yellow">#F4E039</color>
+    <color name="green">#4DF504</color>
 
 
 </resources>
