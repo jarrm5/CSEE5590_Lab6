@@ -2,7 +2,7 @@
 <!-- Background circle for the magnitude value -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="oval">
-    <solid android:color="@color/add_subtract_background" />
+    <solid android:color="@color/edit_background" />
     <size
         android:width="36dp"
         android:height="36dp" />

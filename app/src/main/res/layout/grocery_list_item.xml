@@ -2,63 +2,55 @@
     android:layout_width="match_parent"
     android:layout_height="?android:attr/listPreferredItemHeight"
     android:orientation="horizontal"
-    android:paddingEnd="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingStart="16dp"
     android:background="@color/listview_background">
 
     <TextView
         android:id="@+id/item_quantity"
-        android:layout_width="36dp"
+        android:layout_width="0dp"
         android:layout_height="36dp"
         android:layout_gravity="center_vertical"
+        android:layout_weight=".5"
+        android:layout_marginLeft="10dp"
         android:background="@drawable/grocery_item_circle"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:textColor="@android:color/white"
         android:textSize="16sp" />
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/item_name"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
+        android:layout_weight="2"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/text_color"
+        android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/item_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="2"
-            android:textColor="@color/text_color"
-            android:textSize="16sp"
-            />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:id="@+id/btnEdit"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight=".5"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:orientation="vertical">
+        android:background="@drawable/grocery_item_circle"
+        android:scaleType="fitCenter"
+        android:layout_marginRight="10dp"
+        android:padding="2dp"
+        android:src="@mipmap/edit" />
 
-        <TextView
-            android:id="@+id/item_add_subtract"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_gravity="center_vertical"
-            android:background="@drawable/grocery_item_circle"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:text="@string/textView_add_subtract" />
+    <ImageButton
+        android:id="@+id/btnTrash"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight=".5"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/grocery_item_circle"
+        android:padding="2dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/trash" />
 
-    </LinearLayout>
+
 </LinearLayout>

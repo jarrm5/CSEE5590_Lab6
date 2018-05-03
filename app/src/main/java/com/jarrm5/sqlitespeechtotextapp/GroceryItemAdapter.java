@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import java.util.List;
 
@@ -29,15 +30,18 @@ public class GroceryItemAdapter extends ArrayAdapter<GroceryItem> {
 
         TextView mItemQuantity = listItemView.findViewById(R.id.item_quantity);
         TextView mItemName = listItemView.findViewById(R.id.item_name);
-        TextView mItemAddSubtract = listItemView.findViewById(R.id.item_add_subtract);
+        ImageButton mItemEdit = listItemView.findViewById(R.id.btnEdit);
+        ImageButton mItemTrash = listItemView.findViewById(R.id.btnTrash);
 
         GradientDrawable mItemQuantityCircle = (GradientDrawable) mItemQuantity.getBackground();
-        GradientDrawable mItemAddSubtractCircle = (GradientDrawable) mItemAddSubtract.getBackground();
+        GradientDrawable mItemEditCircle = (GradientDrawable) mItemEdit.getBackground();
+        GradientDrawable mItemTrashCircle = (GradientDrawable) mItemTrash.getBackground();
 
         int backgroundColor = getBackgroundColor(position);
 
         mItemQuantityCircle.setColor(backgroundColor);
-        mItemAddSubtractCircle.setColor(ContextCompat.getColor(getContext(),R.color.add_subtract_background));
+        mItemEditCircle.setColor(ContextCompat.getColor(getContext(),R.color.edit_background));
+        mItemTrashCircle.setColor(ContextCompat.getColor(getContext(),R.color.edit_background));
 
         mItemQuantity.setText(Integer.toString(current.getQuantity()));
         mItemName.setText(current.getName());
