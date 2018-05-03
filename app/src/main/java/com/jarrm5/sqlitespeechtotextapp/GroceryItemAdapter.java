@@ -37,7 +37,7 @@ public class GroceryItemAdapter extends ArrayAdapter<GroceryItem> {
         int backgroundColor = getBackgroundColor(position);
 
         mItemQuantityCircle.setColor(backgroundColor);
-        mItemAddSubtractCircle.setColor(backgroundColor);
+        mItemAddSubtractCircle.setColor(ContextCompat.getColor(getContext(),R.color.add_subtract_background));
 
         mItemQuantity.setText(Integer.toString(current.getQuantity()));
         mItemName.setText(current.getName());
