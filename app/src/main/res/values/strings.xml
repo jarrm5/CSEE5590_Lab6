@@ -5,4 +5,8 @@
     <string name="textView_hint">Tap to add an item</string>
     <string name="textView_add_subtract">-/+</string>
 
+    <!-- Edit Grocery Item dialog Fragment -->
+    <string name = "edit_item_dialog_update">Update</string>
+    <string name = "edit_item_dialog_cancel">Cancel</string>
+
 </resources>
