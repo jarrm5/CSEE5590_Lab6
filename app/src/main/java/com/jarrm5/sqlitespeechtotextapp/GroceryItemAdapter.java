@@ -2,23 +2,31 @@ package com.jarrm5.sqlitespeechtotextapp;
 
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
+import android.media.Image;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.util.List;
 
 public class GroceryItemAdapter extends ArrayAdapter<GroceryItem> {
 
+    public interface ListViewListener{
+        public void onDeleteGroceryItem(int position);
+    }
+
     public GroceryItemAdapter(Context context, List<GroceryItem> groceryItems) {
         super(context, 0, groceryItems);
     }
 
+    private ListViewListener mListViewListener;
+
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
 
         View listItemView = convertView;
         if (listItemView == null) {
@@ -31,22 +39,33 @@ public class GroceryItemAdapter extends ArrayAdapter<GroceryItem> {
         TextView mItemQuantity = listItemView.findViewById(R.id.item_quantity);
         TextView mItemName = listItemView.findViewById(R.id.item_name);
         ImageButton mItemEdit = listItemView.findViewById(R.id.btnEdit);
-        ImageButton mItemTrash = listItemView.findViewById(R.id.btnTrash);
+        ImageButton mItemDelete = listItemView.findViewById(R.id.btnDelete);
 
         GradientDrawable mItemQuantityCircle = (GradientDrawable) mItemQuantity.getBackground();
         GradientDrawable mItemEditCircle = (GradientDrawable) mItemEdit.getBackground();
-        GradientDrawable mItemTrashCircle = (GradientDrawable) mItemTrash.getBackground();
+        GradientDrawable mItemDeleteCircle = (GradientDrawable) mItemDelete.getBackground();
 
         int backgroundColor = getBackgroundColor(position);
 
         mItemQuantityCircle.setColor(backgroundColor);
         mItemEditCircle.setColor(ContextCompat.getColor(getContext(),R.color.edit_background));
-        mItemTrashCircle.setColor(ContextCompat.getColor(getContext(),R.color.edit_background));
+        mItemDeleteCircle.setColor(ContextCompat.getColor(getContext(),R.color.edit_background));
 
         mItemQuantity.setText(Integer.toString(current.getQuantity()));
         mItemName.setText(current.getName());
 
+        mItemDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListViewListener.onDeleteGroceryItem(position);
+            }
+        });
+
         return listItemView;
+    }
+
+    public void setItemDeleteListener(ListViewListener listener){
+        this.mListViewListener = listener;
     }
 
     private int getBackgroundColor(int position) {
