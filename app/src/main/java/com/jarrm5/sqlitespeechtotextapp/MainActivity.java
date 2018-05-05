@@ -81,8 +81,7 @@ public class MainActivity extends FragmentActivity implements GroceryItemAdapter
     public void onDeleteGroceryItem(int position){
         String deletedItem = items.get(position).getName();
         items.remove(position);
-        mTextToSpeech.speak(deletedItem + " succesfully removed from list",TextToSpeech.QUEUE_FLUSH,null,null);
-        Toast.makeText(this,deletedItem + " succesfully removed from list",Toast.LENGTH_LONG).show();
+        mTextToSpeech.speak(deletedItem + " removed from list",TextToSpeech.QUEUE_FLUSH,null,null);
         mAdapter.notifyDataSetChanged();
     }
     /*
@@ -94,7 +93,6 @@ public class MainActivity extends FragmentActivity implements GroceryItemAdapter
         items.get(position).setQuantity(quantity);
         GroceryItem editedItem = items.get(position);
         mTextToSpeech.speak("New quantity for " + editedItem.getName() + " is " + Integer.toString(editedItem.getQuantity()),TextToSpeech.QUEUE_FLUSH, null,null);
-        //Toast.makeText(this,"New quantity for " + editedItem.getName() + " is " + Integer.toString(editedItem.getQuantity()),Toast.LENGTH_LONG).show();
         mAdapter.notifyDataSetChanged();
     }
     private void startVoiceInput() {

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Text 2 Speech Grocery List</string>
+    <string name="app_name">Text to Speech Grocery List</string>
 
     <!-- Main Activity -->
     <string name="textView_speak">Add an item</string>
