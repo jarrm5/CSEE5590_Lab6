@@ -8,7 +8,7 @@
         android:id="@+id/grocery_list"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:paddingBottom="16dp"
         android:paddingTop="16dp"
@@ -20,31 +20,68 @@
         android:dividerHeight="1dp"/>
 
     <LinearLayout
-        android:id="@+id/btnSpeakContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/listview_background"
         android:layout_weight="0"
         android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/btnSpeak"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="fill_parent"
-            android:background="@null"
-            android:padding="16dp"
-            android:scaleType="fitCenter"
-            android:src="@mipmap/ic_microphone_2" />
+            android:background="@color/listview_background"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/btnSpeak"
-            android:textColor="@color/text_color"
-            android:layout_marginBottom="5dp"
-            android:text="@string/textView_hint" />
+            <ImageButton
+                android:id="@+id/btnSpeak"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:background="@drawable/grocery_item_circle"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="7dp"
+                android:padding="5dp"
+                android:src="@mipmap/rsz_microphone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:layout_marginBottom="7dp"
+                android:layout_gravity="center"
+                android:text="@string/textView_speak" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:background="@color/listview_background"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btnListen"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/grocery_item_circle"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/rsz_listen" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/text_color"
+                android:text="@string/textView_listen" />
+        </LinearLayout>
+
     </LinearLayout>
 
 

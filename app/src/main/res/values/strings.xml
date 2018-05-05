@@ -2,8 +2,8 @@
     <string name="app_name">Text 2 Speech Grocery List</string>
 
     <!-- Main Activity -->
-    <string name="textView_hint">Tap to add an item</string>
-    <string name="textView_add_subtract">-/+</string>
+    <string name="textView_speak">Add an item</string>
+    <string name="textView_listen">Hear your list</string>
 
     <!-- Edit Grocery Item dialog Fragment -->
     <string name = "edit_item_dialog_update">Update</string>
