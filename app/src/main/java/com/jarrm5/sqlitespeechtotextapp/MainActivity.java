@@ -19,7 +19,7 @@ import java.util.Locale;
 public class MainActivity extends FragmentActivity implements GroceryItemAdapter.ListViewListener, GroceryItemEditDialogFragment.EditItemDialogListener {
 
     private static final int REQ_CODE_SPEECH_INPUT = 100;
-    private static final String TEXT_TO_SPEECH_PROMPT = "Please say an item to add to the list";
+    private static final String SPEECH_TO_TEXT_PROMPT = "Please say an item to add to the list";
 
     private TextToSpeech mTextToSpeech;
     private ImageButton mSpeak;
@@ -99,7 +99,7 @@ public class MainActivity extends FragmentActivity implements GroceryItemAdapter
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
-        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, TEXT_TO_SPEECH_PROMPT);
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, SPEECH_TO_TEXT_PROMPT);
         try {
             startActivityForResult(intent, REQ_CODE_SPEECH_INPUT);
         } catch (ActivityNotFoundException a) {
