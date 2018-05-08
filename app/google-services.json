@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "387517851195",
+    "firebase_url": "https://csee5590lab6.firebaseio.com",
+    "project_id": "csee5590lab6",
+    "storage_bucket": "csee5590lab6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387517851195:android:c00b4920b3b09583",
+        "android_client_info": {
+          "package_name": "com.jarrm5.sqlitespeechtotextapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "387517851195-vf3qjbk6g9li8676f0jck7tmmikr57bs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jarrm5.sqlitespeechtotextapp",
+            "certificate_hash": "2ffeaba67ac9fdbe3873d003326386f7a5a3415d"
+          }
+        },
+        {
+          "client_id": "387517851195-e6g4rb3c4n66fiseek6luafl8e2v8vm2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBstIL9CGt2JN3a6ckC6aFHVF47wTzMVs8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "387517851195-e6g4rb3c4n66fiseek6luafl8e2v8vm2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

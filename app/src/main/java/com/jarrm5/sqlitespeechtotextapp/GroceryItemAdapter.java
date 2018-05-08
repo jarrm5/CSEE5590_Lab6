@@ -67,7 +67,7 @@ public class GroceryItemAdapter extends ArrayAdapter<GroceryItem>  {
         mItemEditCircle.setColor(ContextCompat.getColor(getContext(),R.color.edit_background));
         mItemDeleteCircle.setColor(ContextCompat.getColor(getContext(),R.color.edit_background));
 
-        mItemQuantity.setText(Integer.toString(current.getQuantity()));
+        mItemQuantity.setText(Long.toString(current.getQuantity()));
         mItemName.setText(current.getName());
 
         mItemDelete.setOnClickListener(new View.OnClickListener() {
