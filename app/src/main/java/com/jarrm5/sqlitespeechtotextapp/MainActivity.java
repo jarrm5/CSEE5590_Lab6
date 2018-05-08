@@ -66,6 +66,8 @@ public class MainActivity extends FragmentActivity implements GroceryItemAdapter
 
                     items.add(groceryItem);
                 }
+
+                mAdapter.notifyDataSetChanged();
             }
 
             @Override
